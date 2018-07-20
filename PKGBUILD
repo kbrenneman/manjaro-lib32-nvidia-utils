@@ -5,8 +5,8 @@
 _pkgbasename=nvidia-utils
 pkgbase=lib32-$_pkgbasename
 pkgname=('lib32-nvidia-utils' 'lib32-opencl-nvidia')
-pkgver=396.24
-pkgrel=2
+pkgver=396.45
+pkgrel=1
 epoch=1
 arch=('x86_64')
 url="http://www.nvidia.com/"
@@ -17,7 +17,7 @@ _pkg="NVIDIA-Linux-${arch}-${pkgver}"
 durl="http://us.download.nvidia.com/XFree86/Linux-x86_64/${pkgver}"
 #durl="http://developer.download.nvidia.com/assets/opengl/369.00"
 source=("${durl}/NVIDIA-Linux-x86_64-${pkgver}.run")
-sha256sums=('59bb112b17ca72cd15fed4e521d4b52b0e9f5b8b13a95b36521f8eda978b568e')
+sha256sums=('30c2e29a45794227079730eac7c452da5290ea8f336ed2286dafd488e3695f20')
 
 create_links() {
     # create soname links
