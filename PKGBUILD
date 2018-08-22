@@ -67,14 +67,14 @@ package_lib32-nvidia-utils() {
     #ln -s "libglx.so.${pkgver}" "${pkgdir}/usr/lib32/nvidia/xorg/modules/extensions/libglx.so"	# X doesn't find glx otherwise
     install -D -m755 "32/libGLX.so.0" "${pkgdir}/usr/lib32/nvidia/xorg/modules/extensions/libglx.so.0"
     ln -s "libglx.so.0" "${pkgdir}/usr/lib32/nvidia/xorg/modules/extensions/libglx.so"	# X doesn't find glx otherwise
-    install -D -m755 "32/libGLX_nvidia.so.${pkgver}" "${pkgdir}/usr/lib32/libGLX_nvidia.so.${pkgver}"
-    #ln -s "libGLX_nvidia.so.${pkgver}" "${pkgdir}/usr/lib32/libGLX_indirect.so.0"
 
     # Wayland
     #install -D -m755 "32/libnvidia-egl-wayland.so.1.0.3" "${pkgdir}/usr/lib32/libnvidia-egl-wayland.so.1.0.3"
     #ln -s "libnvidia-egl-wayland.so.1.0.3" "${pkgdir}/usr/lib32/libnvidia-egl-wayland.so.1"
 
     # OpenGL libraries
+    install -D -m755 "32/libGLX_nvidia.so.${pkgver}" "${pkgdir}/usr/lib32/libGLX_nvidia.so.${pkgver}"
+    #ln -s "libGLX_nvidia.so.${pkgver}" "${pkgdir}/usr/lib32/libGLX_indirect.so.0"
     install -D -m755 "32/libEGL_nvidia.so.${pkgver}" "${pkgdir}/usr/lib32/libEGL_nvidia.so.${pkgver}"
     install -D -m755 "32/libGLESv1_CM_nvidia.so.${pkgver}" "${pkgdir}/usr/lib32/libGLESv1_CM_nvidia.so.${pkgver}"
     install -D -m755 "32/libGLESv2_nvidia.so.${pkgver}" "${pkgdir}/usr/lib32/libGLESv2_nvidia.so.${pkgver}"
